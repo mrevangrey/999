@@ -1,0 +1,311 @@
+/*
+** Color variables
+*/
+/*
+** Responsive breakpoints
+*/
+/*
+** Other variables
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*:before,
+*:after {
+  content: "";
+  position: absolute;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1128px;
+  }
+}
+
+.header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 1.5rem;
+}
+
+.header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  margin: 4rem 0;
+}
+
+.section:first-of-type {
+  margin: 0 0 4rem 0;
+}
+
+.section:last-of-type {
+  margin: 4rem 0 0 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.button__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+** Hero
+*/
+.c-hero {
+  position: relative;
+}
+
+.c-hero .c-hero__content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .c-hero .c-hero__content {
+    padding: 10rem 12rem 3rem 12rem;
+  }
+}
+
+.c-hero .c-hero__button-group {
+  margin-top: 2rem;
+}
+
+.c-hero .c-hero__img-holder {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.c-hero .c-hero__img-holder:before {
+  width: 300px;
+  height: 300px;
+  top: 0%;
+  left: 50%;
+  background-color: #d3299a;
+  transform: translate(-50%);
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 992px) {
+  .c-hero .c-hero__img-holder {
+    width: 70%;
+  }
+}
+
+.c-hero .c-hero__img {
+  width: 100%;
+}
+
+.c-hero:before {
+  background: #101d2d;
+  width: 100%;
+  height: 640px;
+  z-index: -1;
+}
+
+.c-hero:after {
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  height: 640px;
+  background-image: url("../../img/art.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate(-50%);
+  z-index: -1;
+}
+
+/*
+** Logo
+*/
+.c-logo {
+  display: flex;
+  align-items: center;
+}
+
+.c-logo .c-logo__img {
+  height: 2rem;
+}
+
+.c-logo .c-logo__text {
+  margin-left: 0.7rem;
+  font-weight: 600;
+}
+
+.c-logo .c-logo__text--white {
+  color: white;
+}
+
+/*
+** List
+*/
+.c-list {
+  list-style: none;
+  margin-right: 1.5rem;
+}
+
+.c-list .c-list__link {
+  color: #808ab8;
+}
+
+/*
+** Button
+*/
+.c-button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-button~.c-button {
+  margin-left: 1.4rem;
+}
+
+.c-button--small {
+  padding: 0.6rem 0.8rem;
+}
+
+.c-button--primary {
+  background-color: #29d2d3;
+  color: #101d2d;
+}
+
+.c-button--secondary {
+  background-color: #2d3a4b;
+  color: white;
+}
+
+.c-button:after {
+  top: 0;
+  left: -50%;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.15);
+  width: 0%;
+  height: 100%;
+  transform: skew(50deg);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: top left;
+}
+
+.c-button:hover:after {
+  width: 150%;
+}
+
+/*
+** Heading
+*/
+.heading {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.heading--light {
+  color: white;
+}
+
+.heading--dark {
+  color: #101d2d;
+}
+
+.heading--blue {
+  color: #808ab8;
+}
+
+.heading--1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.heading--2 {
+  font-size: 2.5rem;
+}
+
+.heading--4 {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  font-size: 1.2rem;
+}
+
+/*
+** Link
+*/
+.c-link {
+  position: relative;
+  text-decoration: none;
+  color: #101d2d;
+}
+
+.c-link:after {
+  left: 0;
+  bottom: -0.2rem;
+  width: 0%;
+  height: 2px;
+  background-color: #101d2d;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: left;
+}
+
+.c-link:hover:after {
+  width: 100%;
+}
+
+.c-link--list {
+  margin-right: 1.5rem;
+  color: #808ab8;
+}
+
+.c-link--list:after {
+  background-color: #808ab8;
+}
